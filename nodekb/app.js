@@ -14,17 +14,18 @@ app.get('/',function(req,res){
    {
    	   id:1,
    	   title:'artical one',
-   	   author:'CMT',
+   	   author:'Someone',
    	   body:'Text here'
    },
    {
    	   id:2,
    	   title:'artical two',
-   	   author:'CMT .',
+   	   author:'Some one',
    	   body:'Text here .'
    }
 
    ];
+	
       res.render('index',{
       	 title:'Local host node js Express server',
       	 articles: articles
