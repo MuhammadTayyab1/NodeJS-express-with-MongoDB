@@ -1,0 +1,14 @@
+{
+  "name": "nodekb",
+  "version": "1.0.0",
+  "description": "simple knoledgebase app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "cmt",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
