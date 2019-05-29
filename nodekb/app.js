@@ -1,13 +1,47 @@
 const express = require('express');
+const path = require('path');
 
+// Init App
 const app = express();
 
-app.get('/',function(req,res){
+// Load View Engine
+app.set('views',path.join(__dirname,'views'));
+app.set('view engine','pug');
 
-      res.send('hello world with express');
+// Home Route
+app.get('/',function(req,res){
+   let articles =[
+   {
+   	   id:1,
+   	   title:'artical one',
+   	   author:'CMT',
+   	   body:'Text here'
+   },
+   {
+   	   id:2,
+   	   title:'artical two',
+   	   author:'CMT .',
+   	   body:'Text here .'
+   }
+
+   ];
+      res.render('index',{
+      	 title:'Local host node js Express server',
+      	 articles: articles
+      });
 
 });
 
+// Add route
+
+app.get('/articles/add',function(req, res){
+       res.render('add_articles',{
+      	 title:'Add articles',
+      	 article : articles
+      });
+})
+
+// Sart Server
 app.listen(3000,function(){
 	console.log('server is run on on port 3000');
 
