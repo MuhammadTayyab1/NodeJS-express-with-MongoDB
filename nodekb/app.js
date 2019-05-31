@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 
 // Load View Engine
+
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','pug');
 
@@ -14,25 +15,36 @@ app.get('/',function(req,res){
    {
    	   id:1,
    	   title:'artical one',
-   	   author:'Someone',
+   	   author:'CMT',
    	   body:'Text here'
    },
    {
    	   id:2,
    	   title:'artical two',
-   	   author:'Some one',
-   	   body:'Text here .'
+   	   author:'CMT',
+   	   body:'Text here'
+   },
+   {
+         id:3,
+         title:'artical three',
+         author:'CMT',
+         body:'Text here'
+   },
+   {
+         id:4,
+         title:'artical four',
+         author:'CMT',
+         body:'Text here'
    }
 
    ];
-	
-      res.render('index',{
+      res.render('index',
+      {
       	 title:'Local host node js Express server',
       	 articles: articles
       });
 
 });
-
 
 // Add route
 
@@ -45,6 +57,6 @@ app.get('/articles/add',function(req, res){
 
 // Sart Server
 app.listen(3000,function(){
-	console.log('server is run on on port  3000  ');
+	console.log('Server is run on on port 3000');
 
 })
