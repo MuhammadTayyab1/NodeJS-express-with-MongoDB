@@ -57,6 +57,6 @@ app.get('/articles/add',function(req, res){
 
 // Sart Server
 app.listen(3000,function(){
-	console.log('Server is run on on port 3000');
+	console.log('Server is run on on port = 3000');
 
 })
