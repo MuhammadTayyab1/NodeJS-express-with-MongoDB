@@ -1,7 +1,10 @@
 const http = require('http');
 const fs= require('fs');
 
+// local host
 const hostname = '127.0.0.1';
+
+// port
 const port = 3000;
 
 fs.readFile('index.html',(err, html) => {
